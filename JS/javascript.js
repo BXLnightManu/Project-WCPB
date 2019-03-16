@@ -1,4 +1,7 @@
-var poster = document.getElementsByClassName("poster");
+/*(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+        var poster = document.getElementsByClassName("poster");
+        console.log(poster)
 for(var x=0; x < poster.length; x++) {
     poster[x].onmouseover= function() {mouseOver()};
     function mouseOver() {
@@ -48,3 +51,6 @@ for(var x=0; x < wzddesc.length; x++) {
         wzddesc[x].style.color = "rgb(255,255,255)";
     }
 }
+    })
+})();
+*/

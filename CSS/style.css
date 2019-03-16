@@ -3,19 +3,40 @@
     display: flex;
     flex-wrap: wrap;
 }
-.wanted {
+.wanted1 {
     display: inline-block;
     width: 200px;
     height: 200px;
     margin: 10px;
+    opacity: 0.8;
 }
-.poster {
+.wanted1:hover {
+    opacity: 0;
+}
+.wanted2 {
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    opacity: 0;
+}
+.wanted2:hover {
+    opacity: 1;
+}
+.wanted1 .poster {
     position: absolute;
     width: 200px;
     height: 200px;
     opacity: 0.5;
 }
-.wzdtatus {
+.wanted2 .poster {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+.wanted1 .wzdtatus {
     position: relative;
     display: block;
     width: 170px;
@@ -28,10 +49,10 @@
     font-size: 20px;
     text-align: center;
 }
-.wzdtatus span {
+.wanted1 .wzdtatus span {
     color: rgb(255,128,0)
 }
-.wzdname {
+.wanted1 .wzdname {
     position: relative;
     display: block;
     width: 180px;
@@ -41,7 +62,18 @@
     font-weight: bold;
     text-align: center;
 }
-.wzddesc {
+.wanted2 .wzdname {
+    position: relative;
+    display: block;
+    width: 180px;
+    left: 10px;
+    top:150px;
+    color: rgb(255,255,255);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.wanted1 .wzddesc {
     position: relative;
     display: block;
     width: 180px;
