@@ -1,49 +1,22 @@
 (() => {
     document.addEventListener("DOMContentLoaded", () => {
-        const posters = document.getElementsByClassName("poster");
-        for (const poster of posters) {
-            poster.onmouseover = function() {
-                poster.style.opacity = "1";
+        const wanteds1 = document.getElementsByClassName("wanted1");
+        for (const wanted1 of wanteds1) {
+            wanted1.onmouseover = function() {
+                wanted1.style.opacity = "0";
             };
-
-            poster.onmouseout = function() {
-                poster.style.opacity = "0.5";
-            };
-        }
-
-        const wzdtatuses = document.getElementsByClassName("wzdtatus");
-        for (const wzdtatus of wzdtatuses) {
-            wzdtatus.onmouseover = function() {
-                wzdtatus.style.backgroundColor = "transparent";
-                wzdtatus.style.color = "transparent";
-            };
-            wzdtatus.onmouseout = function() {
-                wzdtatus.style.backgroundColor = "rgba(224,224,224,0.8)";
-                wzdtatus.style.color = "rgba(0,0,0)";
+            wanted1.onmouseout = function() {
+                wanted1.style.opacity = "1";
             };
         }
 
-        const wzdnames = document.getElementsByClassName("wzdname");
-        for (const wzdname of wzdnames) {
-            wzdname.onmouseover = function() {
-                wzdname.style.fontsize = "15px";
-                wzdname.style.top = "80px";
+        const wanteds2 = document.getElementsByClassName("wanted2");
+        for (const wanted2 of wanteds2) {
+            wanted2.onmouseover = function() {
+                wanted2.style.opacity = "1";
             };
-
-            wzdname.onmouseout = function() {
-                wzdname.style.fontsize = "25px";
-                wzdname.style.top = "0px";
-            };
-        }
-
-        const wzddescs = document.getElementsByClassName("wzddesc");
-        for (const wzddesc of wzddescs) {
-            wzddesc.onmouseover = function() {
-                wzddesc.style.color = "transparent";
-            };
-
-            wzddesc.onmouseout = function() {
-                wzddesc.style.color = "rgb(255,255,255)";
+            wanted2.onmouseout = function() {
+                wanted2.style.opacity = "0";
             };
         }
     });
