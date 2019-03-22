@@ -7,6 +7,7 @@
             };
             wanted1.onmouseout = function() {
                 wanted1.style.opacity = "1";
+                wanted1.style.cursor = "crosshair";
             };
         }
 
@@ -14,6 +15,7 @@
         for (const wanted2 of wanteds2) {
             wanted2.onmouseover = function() {
                 wanted2.style.opacity = "1";
+                wanted2.style.cursor = "crosshair";
             };
             wanted2.onmouseout = function() {
                 wanted2.style.opacity = "0";
