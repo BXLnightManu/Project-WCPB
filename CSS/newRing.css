@@ -67,10 +67,10 @@ body header nav ul #findThePreciousList #findThePreciousLink, body footer nav ul
 
 body header nav ul #findThePreciousList #findThePreciousLink #theRingImage, body footer nav ul #findThePreciousList #findThePreciousLink #theRingImage {
   display: inline-block;
-  width: 20px;
-  height: 17px;
+  width: 15px;
+  height: 12.7px;
   background-image: url(../Images/Unico_Anello.png);
-  background-size: 20px 17px;
+  background-size: 15px 12.7px;
 }
 
 body header nav ul #findThePreciousList #findThePreciousLink:hover, body footer nav ul #findThePreciousList #findThePreciousLink:hover {
