@@ -7,38 +7,18 @@
 }
 .wanted {
     position: relative;
-}
-.wanted1 {
-    position: absolute;
     width: 200px;
     height: 200px;
     margin: 10px;
+}
+.poster {
+    position: absolute;
+    width: 200px;
+    height: 200px;
     opacity: 0.7;
 }
-.wanted1:hover {
-    opacity: 0;
-}
-.wanted2 {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    opacity: 0;
-}
-.wanted2:hover {
-    opacity: 1;
-}
-.wanted1 .poster {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-}
-.wanted2 .poster {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-}
-.wanted1 .wzdtatus {
+.wzdtatus {
+    z-index: 2;
     position: absolute;
     display: block;
     width: 170px;
@@ -51,10 +31,7 @@
     font-size: 20px;
     text-align: center;
 }
-.wanted1 .wzdtatus span {
-    color: rgb(255,128,0)
-}
-.wanted1 .wzdname {
+.wzdname {
     position: absolute;
     display: block;
     width: 180px;
@@ -65,7 +42,24 @@
     font-weight: bold;
     text-align: center;
 }
-.wanted2 .wzdname {
+.wzddesc {
+    position: absolute;
+    display: block;
+    width: 180px;
+    left: 10px;
+    bottom: 5%;
+    color: rgb(255,255,255);
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+}
+.poster:hover {
+    opacity: 1;
+}
+.wanted:hover .wzdtatus {
+    visibility: hidden;
+}
+.wanted:hover .wzdname {
     position: absolute;
     display: block;
     width: 180px;
@@ -76,14 +70,6 @@
     font-weight: bold;
     text-align: center;
 }
-.wanted1 .wzddesc {
-    position: absolute;
-    display: block;
-    width: 180px;
-    left: 10px;
-    bottom: 5%;
-    color: rgb(255,255,255);
-    font-size: 9px;
-    font-weight: bold;
-    text-align: center;
+.wanted:hover .wzddesc {
+    visibility: hidden;
 }
