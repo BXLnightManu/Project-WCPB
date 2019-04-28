@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Aniron';
+  font-weight: normal;
   src: url("../font-family/anirm___.woff");
 }
 
@@ -55,17 +56,17 @@ body header nav ul li a:hover, body footer nav ul li a:hover {
           text-decoration: underline white;
 }
 
-body header nav ul #findThePreciousList, body footer nav ul #findThePreciousList {
+body header nav ul .findThePreciousList, body footer nav ul .findThePreciousList {
   border: none;
 }
 
-body header nav ul #findThePreciousList #findThePreciousLink, body footer nav ul #findThePreciousList #findThePreciousLink {
+body header nav ul .findThePreciousList .findThePreciousLink, body footer nav ul .findThePreciousList .findThePreciousLink {
   color: white;
   text-decoration: none;
   font-size: 15px;
 }
 
-body header nav ul #findThePreciousList #findThePreciousLink #theRingImage, body footer nav ul #findThePreciousList #findThePreciousLink #theRingImage {
+body header nav ul .findThePreciousList .findThePreciousLink .theRingImage, body footer nav ul .findThePreciousList .findThePreciousLink .theRingImage {
   display: inline-block;
   width: 15px;
   height: 12.7px;
@@ -73,7 +74,7 @@ body header nav ul #findThePreciousList #findThePreciousLink #theRingImage, body
   background-size: 15px 12.7px;
 }
 
-body header nav ul #findThePreciousList #findThePreciousLink:hover, body footer nav ul #findThePreciousList #findThePreciousLink:hover {
+body header nav ul .findThePreciousList #findThePreciousLink:hover, body footer nav ul .findThePreciousList #findThePreciousLink:hover {
   text-decoration: none;
 }
 
@@ -254,5 +255,28 @@ body footer ul li a:hover {
   color: white;
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
+}
+
+body footer ul .findThePreciousList {
+  padding-top: 1%;
+  border: none;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink .theRingImage {
+  display: inline-block;
+  width: 15px;
+  height: 12.7px;
+  background-image: url(../Images/Unico_Anello.png);
+  background-size: 15px 12.7px;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink:hover {
+  text-decoration: none;
 }
 /*# sourceMappingURL=newRing.css.map */

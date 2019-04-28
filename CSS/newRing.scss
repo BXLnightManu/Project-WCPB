@@ -1,5 +1,6 @@
 @font-face {
     font-family: 'Aniron';
+    font-weight: normal;
     src: url("../font-family/anirm___.woff");
 }
 
@@ -78,14 +79,14 @@ body {
                     }
                 }
 
-                #findThePreciousList {
+                .findThePreciousList {
                     border:none;
 
-                    #findThePreciousLink {
+                    .findThePreciousLink {
                         @include linkDecoration();
                         font-size: 15px;
 
-                        #theRingImage {
+                        .theRingImage {
                             display: inline-block;
                             width: 15px;
                             height: 12.7px;
@@ -185,6 +186,28 @@ body {
 
                     a:hover {
                         @include linkDecorationOnHover();
+                    }
+                }
+
+                .findThePreciousList {
+                    padding-top: 1%;
+                    border:none;
+
+                    .findThePreciousLink {
+                        @include linkDecoration();
+                        font-size: 15px;
+
+                        .theRingImage {
+                            display: inline-block;
+                            width: 15px;
+                            height: 12.7px;
+                            background-image: url(../Images/Unico_Anello.png);
+                            background-size: 15px 12.7px;
+                        }
+                    }
+                    
+                    .findThePreciousLink:hover {
+                        text-decoration: none;
                     }
                 }
                             
