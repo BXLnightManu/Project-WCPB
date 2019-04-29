@@ -20,7 +20,7 @@ body {
             border-radius: 50%;
             box-shadow: $diameter/30 $diameter/30 darken(rgb(222, 130, 53), 25%);
 
-        } @else if $diameter==100px {
+        } @else if $diameter==(100px) {
             width: $diameter;
             height: $diameter;
             border: solid $diameter/10 rgb(250, 207, 0);
@@ -42,7 +42,8 @@ body {
 
     @mixin linkDecorationOnHover {
         color: rgb(255, 255, 255);
-        text-decoration: underline white;
+        border-bottom: solid 2px rgb(255, 255, 255);
+        text-decoration: none;
     }
 
     $background-color-page: (
@@ -67,7 +68,7 @@ body {
                     padding-right: 2%;
                     padding-left: 2%;
                     border-right: solid 1px rgb(255, 255, 255);
-                    list-style-type: none;
+                    list-style: none;
 
                     a {
                         @include linkDecoration();
@@ -91,17 +92,17 @@ body {
                             width: 15px;
                             height: 12.7px;
                             background-image: url(../Images/Unico_Anello.png);
-                            background-size: 15px 12.7px;
+                            background-size: (15px) (12.7px);
                         }
                     }
                     
-                    #findThePreciousLink:hover {
-                        text-decoration: none;
+                    .findThePreciousLink:hover {
+                        border-bottom: none;
                     }
                 }
                 
                 #lastListItem {
-                    border:none;
+                    border-right:none;
                 }
             }
         }
@@ -176,21 +177,27 @@ body {
 
                 li {
                     font-size: 10px;
+                    text-align: center;
                     list-style: none;
 
                     a {
                         @include linkDecoration();
-                        display: block;
-                        text-align: center;
+                        display: inline-block;
+                        height: 16px;
+                        margin: 1%;
                     }
 
                     a:hover {
                         @include linkDecorationOnHover();
+                        display: inline-block;
+                    }
+
+                    #twitterLink  {
+                        height: 30px;
                     }
                 }
 
                 .findThePreciousList {
-                    padding-top: 1%;
                     border:none;
 
                     .findThePreciousLink {
@@ -202,12 +209,12 @@ body {
                             width: 15px;
                             height: 12.7px;
                             background-image: url(../Images/Unico_Anello.png);
-                            background-size: 15px 12.7px;
+                            background-size: (15px) (12.7px);
                         }
                     }
                     
                     .findThePreciousLink:hover {
-                        text-decoration: none;
+                        border-bottom: none;
                     }
                 }
                             

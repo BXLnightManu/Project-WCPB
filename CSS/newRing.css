@@ -41,7 +41,7 @@ body header nav ul li, body footer nav ul li {
   padding-right: 2%;
   padding-left: 2%;
   border-right: solid 1px white;
-  list-style-type: none;
+  list-style: none;
 }
 
 body header nav ul li a, body footer nav ul li a {
@@ -52,8 +52,8 @@ body header nav ul li a, body footer nav ul li a {
 
 body header nav ul li a:hover, body footer nav ul li a:hover {
   color: white;
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+  border-bottom: solid 2px white;
+  text-decoration: none;
 }
 
 body header nav ul .findThePreciousList, body footer nav ul .findThePreciousList {
@@ -74,12 +74,12 @@ body header nav ul .findThePreciousList .findThePreciousLink .theRingImage, body
   background-size: 15px 12.7px;
 }
 
-body header nav ul .findThePreciousList #findThePreciousLink:hover, body footer nav ul .findThePreciousList #findThePreciousLink:hover {
-  text-decoration: none;
+body header nav ul .findThePreciousList .findThePreciousLink:hover, body footer nav ul .findThePreciousList .findThePreciousLink:hover {
+  border-bottom: none;
 }
 
 body header nav ul #lastListItem, body footer nav ul #lastListItem {
-  border: none;
+  border-right: none;
 }
 
 body article {
@@ -241,24 +241,30 @@ body footer ul {
 
 body footer ul li {
   font-size: 10px;
+  text-align: center;
   list-style: none;
 }
 
 body footer ul li a {
   color: white;
   text-decoration: none;
-  display: block;
-  text-align: center;
+  display: inline-block;
+  height: 16px;
+  margin: 1%;
 }
 
 body footer ul li a:hover {
   color: white;
-  -webkit-text-decoration: underline white;
-          text-decoration: underline white;
+  border-bottom: solid 2px white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+body footer ul li #twitterLink {
+  height: 30px;
 }
 
 body footer ul .findThePreciousList {
-  padding-top: 1%;
   border: none;
 }
 
@@ -277,6 +283,6 @@ body footer ul .findThePreciousList .findThePreciousLink .theRingImage {
 }
 
 body footer ul .findThePreciousList .findThePreciousLink:hover {
-  text-decoration: none;
+  border-bottom: none;
 }
 /*# sourceMappingURL=newRing.css.map */
