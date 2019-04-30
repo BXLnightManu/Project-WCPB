@@ -1,0 +1,75 @@
+/* Fellows wanted dead */
+#fellows {
+    display: flex;
+    justify-content: space-around;
+    height: 230px;
+    width: 50%;
+}
+.wanted {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.poster {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.7;
+}
+.wzdtatus {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    width: 170px;
+    left: 15px;
+    top: 5%;
+    margin: 0px;
+    padding: 5px 0px;
+    background-color: rgba(224,224,224,0.8);
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.wzdname {
+    position: absolute;
+    display: block;
+    width: 180px;
+    left: 10px;
+    top: 25%;
+    color: rgb(255,255,255);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.wzddesc {
+    position: absolute;
+    display: block;
+    width: 180px;
+    left: 10px;
+    bottom: 5%;
+    color: rgb(255,255,255);
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+}
+.poster:hover {
+    opacity: 1;
+}
+.wanted:hover .wzdtatus {
+    visibility: hidden;
+}
+.wanted:hover .wzdname {
+    position: absolute;
+    display: block;
+    width: 180px;
+    left: 10px;
+    top:70%;
+    color: rgb(255,255,255);
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.wanted:hover .wzddesc {
+    visibility: hidden;
+}

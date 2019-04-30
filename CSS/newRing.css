@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'Aniron';
+  font-weight: normal;
+  src: url("../font-family/anirm___.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Aniron';
+}
+
+@-webkit-keyframes ringShining {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes ringShining {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+body header, body footer {
+  display: block;
+  background-color: #fe6100;
+}
+
+body header nav, body footer nav {
+  padding: 1%;
+}
+
+body header nav ul, body footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+body header nav ul li, body footer nav ul li {
+  margin: auto 0;
+  padding-right: 2%;
+  padding-left: 2%;
+  border-right: solid 1px white;
+  list-style: none;
+}
+
+body header nav ul li a, body footer nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+body header nav ul li a:hover, body footer nav ul li a:hover {
+  color: white;
+  border-bottom: solid 2px white;
+  text-decoration: none;
+}
+
+body header nav ul .findThePreciousList, body footer nav ul .findThePreciousList {
+  border: none;
+}
+
+body header nav ul .findThePreciousList .findThePreciousLink, body footer nav ul .findThePreciousList .findThePreciousLink {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+body header nav ul .findThePreciousList .findThePreciousLink .theRingImage, body footer nav ul .findThePreciousList .findThePreciousLink .theRingImage {
+  display: inline-block;
+  width: 15px;
+  height: 12.7px;
+  background-image: url(../Images/Unico_Anello.png);
+  background-size: 15px 12.7px;
+  -webkit-animation: ringShining 3s infinite;
+          animation: ringShining 3s infinite;
+}
+
+body header nav ul .findThePreciousList .findThePreciousLink:hover, body footer nav ul .findThePreciousList .findThePreciousLink:hover {
+  border-bottom: none;
+}
+
+body header nav ul #lastListItem, body footer nav ul #lastListItem {
+  border-right: none;
+}
+
+body article {
+  background-color: #f0f0e6;
+}
+
+body article p {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+body article #firstRingBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1%;
+}
+
+body article .othersRingBlocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4%;
+}
+
+body article .ringMyPrecious {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: solid 3px #de8235;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px #7f4515;
+          box-shadow: 1px 1px #7f4515;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+body article #ringTheOne {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: solid 10px #facf00;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px #7b6500;
+          box-shadow: 2px 2px #7b6500;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+body article #ringLoopBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 200px;
+}
+
+body article #ringfindIt {
+  padding-bottom: 2%;
+}
+
+body article #ringLooping-1 {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0%;
+  border: solid 3px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px lighen(#424242, 25%);
+          box-shadow: 1px 1px lighen(#424242, 25%);
+}
+
+body article #ringLooping-2 {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 11%;
+  border: solid 3.5px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1.16667px 1.16667px lighen(#424242, 25%);
+          box-shadow: 1.16667px 1.16667px lighen(#424242, 25%);
+}
+
+body article #ringLooping-3 {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 23%;
+  border: solid 4px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1.33333px 1.33333px lighen(#424242, 25%);
+          box-shadow: 1.33333px 1.33333px lighen(#424242, 25%);
+}
+
+body article #ringLooping-4 {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 36%;
+  border: solid 4.5px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1.5px 1.5px lighen(#424242, 25%);
+          box-shadow: 1.5px 1.5px lighen(#424242, 25%);
+}
+
+body article #ringLooping-5 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  border: solid 5px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1.66667px 1.66667px lighen(#424242, 25%);
+          box-shadow: 1.66667px 1.66667px lighen(#424242, 25%);
+}
+
+body article #ringLooping-6 {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 65%;
+  border: solid 5.5px #424242;
+  border-radius: 50%;
+  -webkit-box-shadow: 1.83333px 1.83333px lighen(#424242, 25%);
+          box-shadow: 1.83333px 1.83333px lighen(#424242, 25%);
+}
+
+body footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer ul {
+  width: 33%;
+}
+
+body footer ul li {
+  font-size: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+body footer ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  height: 16px;
+  margin: 1%;
+}
+
+body footer ul li a:hover {
+  color: white;
+  border-bottom: solid 2px white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+body footer ul li #twitterLink {
+  height: 30px;
+}
+
+body footer ul .findThePreciousList {
+  border: none;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink .theRingImage {
+  display: inline-block;
+  width: 15px;
+  height: 12.7px;
+  background-image: url(../Images/Unico_Anello.png);
+  background-size: 15px 12.7px;
+  -webkit-animation: ringShining 3s infinite;
+          animation: ringShining 3s infinite;
+}
+
+body footer ul .findThePreciousList .findThePreciousLink:hover {
+  border-bottom: none;
+}
+/*# sourceMappingURL=newRing.css.map */
