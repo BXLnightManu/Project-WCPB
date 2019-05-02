@@ -9,173 +9,214 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Aniron';
-    
-    @mixin ringDesign ($diameter) {
-        @if $diameter==30px {
-            position: relative;
-            width: $diameter;
-            height: $diameter;
-            border: solid $diameter/10 rgb(222, 130, 53);
-            border-radius: 50%;
-            box-shadow: $diameter/30 $diameter/30 darken(rgb(222, 130, 53), 25%);
+html {
 
-        } @else if $diameter==(100px) {
-            position: relative;
-            width: $diameter;
-            height: $diameter;
-            border: solid $diameter/10 rgb(250, 207, 0);
-            border-radius: 50%;
-            box-shadow: $diameter/50 $diameter/50 darken(rgb(250, 207, 0), 25%);
+    height: 100%;
+
+    @media (min-width: 1200px) {
+        article {
+            height: 720px;
         }
     }
 
-    @mixin displayingContent {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    @media (min-width: 992px) {
+        article {
+            height: 590px;
+        }
     }
 
-    @mixin linkDecoration {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
+    @media (min-width: 768px) {
+        article {
+            height: 400px;
+        }
     }
 
-    @mixin linkDecorationOnHover {
-        color: rgb(255, 255, 255);
-        border-bottom: solid 2px rgb(255, 255, 255);
-        text-decoration: none;
+    @media (min-width: 576px) {
+        article {
+            height: 360px;
+        }
     }
-
-    $background-color-page: (
-        "headerFooter":rgb(254,97,0),
-        "article":rgb(240, 240, 230)
-    );
-
-    @keyframes ringShining {
-        0% {opacity: 1;}
-        100% {opacity: 0.1;}
-    }
-
-    header {
-        display: block;
-        background-color: map-get($background-color-page, "headerFooter");
-
-        nav {
-            padding: 1%;
-
-            ul {
-                @include displayingContent();
-                width: 100%;
-                margin-bottom: 0;
-                                
-                li {
-                    margin: auto 0;
-                    padding-right: 2%;
-                    padding-left: 2%;
-                    border-right: solid 1px rgb(255, 255, 255);
-                    list-style: none;
-
-                    a {
-                        @include linkDecoration();
-                        font-size: 10px;
+    body {
+        min-height: 100%;
+        font-family: 'Aniron';
+        
+        @mixin ringDesign ($diameter) {
+            @if $diameter==30px {
+                position: relative;
+                width: $diameter;
+                height: $diameter;
+                border: solid $diameter/10 rgb(222, 130, 53);
+                border-radius: 50%;
+                box-shadow: $diameter/30 $diameter/30 darken(rgb(222, 130, 53), 25%);
+    
+            } @else if $diameter==(100px) {
+                position: relative;
+                width: $diameter;
+                height: $diameter;
+                border: solid $diameter/10 rgb(250, 207, 0);
+                border-radius: 50%;
+                box-shadow: $diameter/50 $diameter/50 darken(rgb(250, 207, 0), 25%);
+            }
+        }
+    
+        @mixin displayingContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        @mixin linkDecoration {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+    
+        @mixin linkDecorationOnHover {
+            color: rgb(255, 255, 255);
+            border-bottom: solid 2px rgb(255, 255, 255);
+            text-decoration: none;
+        }
+    
+        $background-color-page: (
+            "headerFooter":rgb(254,97,0),
+            "article":rgb(240, 240, 230)
+        );
+    
+        @keyframes ringPower {
+            0% {opacity: 1;}
+            100% {opacity: 0.1;}
+        }
+    
+        header {
+            display: block;
+            background-color: map-get($background-color-page, "headerFooter");
+    
+            nav {
+                padding: 1%;
+    
+                ul {
+                    @include displayingContent();
+                    width: 100%;
+                    margin-bottom: 0;
+                                    
+                    li {
+                        margin: auto 0;
+                        padding-right: 2%;
+                        padding-left: 2%;
+                        border-right: solid 1px rgb(255, 255, 255);
+                        list-style: none;
+    
+                        a {
+                            @include linkDecoration();
+                            font-size: 10px;
+    
+                            &:hover {
+                                @include linkDecorationOnHover();
+                            }
+                        }
                     }
-
-                    a:hover {
-                        @include linkDecorationOnHover();
-                    }
-                }
-
-                .findThePreciousList {
-                    border:none;
-
-                    .findThePreciousLink {
-                        @include linkDecoration();
-                        font-size: 15px;
-
-                        .theRingImage {
-                            display: inline-block;
-                            width: 15px;
-                            height: 12.7px;
-                            background-image: url(../Images/Unico_Anello.png);
-                            background-size: 15px 12.7px;
-                            animation: ringShining 3s infinite;
+    
+                    .findThePreciousList {
+                        border:none;
+    
+                        .findThePreciousLink {
+                            @include linkDecoration();
+                            font-size: 15px;
+    
+                            &:hover {
+                                border-bottom: none;
+                            }
+    
+                            .theRingImage {
+                                display: inline-block;
+                                width: 15px;
+                                height: 12.7px;
+                                background-image: url(../Images/Unico_Anello.png);
+                                background-size: 15px 12.7px;
+                                animation: ringPower 3s infinite;
+                            }
                         }
                     }
                     
-                    .findThePreciousLink:hover {
-                        border-bottom: none;
+                    #lastListItem {
+                        border-right:none;
                     }
                 }
-                
-                #lastListItem {
-                    border-right:none;
+            }
+        }
+    
+        article {
+            display: flex;
+            align-items: center;
+            background-color: map-get($background-color-page, "article");
+
+            #center-content {
+                width: 100%;
+                margin: auto;
+            }
+            
+            p {
+                font-size: 25px;
+                margin-bottom: 0;
+            }
+    
+            #firstRingBlock {
+                @include displayingContent();
+                padding-top: 1%;
+            }
+    
+            .mediumRingBlocks {
+                @include displayingContent();
+                margin-top: 5%;
+            }
+
+            #lastRingBlock {
+                @include displayingContent();
+                margin-top: 2%;
+
+            }
+    
+            .ringMyPrecious {
+                @include ringDesign (30px);
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+    
+            #ringTheOne {
+                @include ringDesign (100px);
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+    
+            #ringLoopBlock {
+                @include displayingContent();
+                position: relative;
+                width: 200px;
+            }
+    
+            #ringfindIt {
+                padding-bottom: 2%;
+            }
+    
+            $diameter: 30px;
+            $position: 0%;
+            $j:1;
+    
+            @for $i from 1 through 6 {
+                #ringLooping-#{$i} {
+                    width: $diameter;
+                    height: $diameter;
+                    position: absolute;
+                    left: $position;
+                    border: solid $diameter/10 rgb(66, 66, 66);
+                    border-radius: 50%;
+                    box-shadow: $diameter/30 $diameter/30 lighen(rgb(66, 66, 66), 25%);
                 }
+                $diameter: $diameter+5px;
+                $position: $position+$j+10;
+                $j:$j+1;
             }
         }
-    }
-
-    article {
-        background-color: map-get($background-color-page, "article");
-        
-        p {
-            font-size: 25px;
-            margin-bottom: 0;
-        }
-
-        #firstRingBlock {
-            @include displayingContent();
-            padding-top: 1%;
-        }
-
-        .othersRingBlocks {
-            @include displayingContent();
-            margin-top: 4%;
-        }
-
-        .ringMyPrecious {
-            @include ringDesign (30px);
-            margin-left: 1%;
-            margin-right: 1%;
-        }
-
-        #ringTheOne {
-            @include ringDesign (100px);
-            margin-left: 1%;
-            margin-right: 1%;
-        }
-
-        #ringLoopBlock {
-            @include displayingContent();
-            position: relative;
-            width: 200px;
-        }
-
-        #ringfindIt {
-            padding-bottom: 2%;
-        }
-
-        $diameter: 30px;
-        $position: 0%;
-        $j:1;
-
-        @for $i from 1 through 6 {
-            #ringLooping-#{$i} {
-                width: $diameter;
-                height: $diameter;
-                position: absolute;
-                left: $position;
-                border: solid $diameter/10 rgb(66, 66, 66);
-                border-radius: 50%;
-                box-shadow: $diameter/30 $diameter/30 lighen(rgb(66, 66, 66), 25%);
-            }
-            $diameter: $diameter+5px;
-            $position: $position+$j+10;
-            $j:$j+1;
-        }
-    }
-
+    
         footer {
             @extend header;
             @include displayingContent();
@@ -193,11 +234,11 @@ body {
                         display: inline-block;
                         height: 16px;
                         margin: 1%;
-                    }
 
-                    a:hover {
-                        @include linkDecorationOnHover();
-                        display: inline-block;
+                        &:hover {
+                            @include linkDecorationOnHover();
+                            display: inline-block;
+                        }
                     }
 
                     #twitterLink  {
@@ -211,22 +252,23 @@ body {
                     .findThePreciousLink {
                         @include linkDecoration();
                         font-size: 15px;
-
+        
+                        &:hover {
+                            border-bottom: none;
+                        }
+    
                         .theRingImage {
                             display: inline-block;
                             width: 15px;
                             height: 12.7px;
                             background-image: url(../Images/Unico_Anello.png);
                             background-size: (15px) (12.7px);
-                            animation: ringShining 3s infinite;
+                            animation: ringPower 3s infinite;
                         }
                     }
-                    
-                    .findThePreciousLink:hover {
-                        border-bottom: none;
-                    }
-                }
-                            
+                }             
             }
         }
     }
+}
+
